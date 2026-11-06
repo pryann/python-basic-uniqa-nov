@@ -37,3 +37,30 @@ def is_palindrom(text):
 
 print(is_palindrom("abbA"))
 print(is_palindrom("baba"))
+
+
+# 1. Készíts egy függvényt, amely paraméterként kap két listát és visszaadja azt a listát, amely csak azokat az elemeket tartalmazza, amelyek mindkét listában szerepelnek! Comprehensiont használj!
+def get_intersection(list_1, list_2):
+    # intersection = []
+    # for i in list_1:
+    #     if i in list_2:
+    #         intersection.append(i)
+    # return intersection
+
+    return [i for i in list_1 if i in list_2]
+
+
+# 2.  Készíts egy függvényt, amely meghatározza, hogy egy szám prím-e vagy sem!
+# A függvény paraméterként egy számot kap a visszatérési érték pedig bool típusú érték.
+
+
+def is_prime(number):
+    if number < 2:
+        return False
+
+    #  you can optimize it
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
